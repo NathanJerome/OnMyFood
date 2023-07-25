@@ -150,6 +150,54 @@ body .loader .circle:nth-child(3) {
 .main-contener .functioning-container .functioning-block .functioning-items h2 {
   width: 35%;
 }
+.main-contener .restaurant_picture img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  height: 300px;
+}
+.main-contener .menu_top_container {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: #F6F6F6;
+  gap: 50%;
+  border: 1px solid grey;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+.main-contener .menu_top_container h1 {
+  margin: 20px;
+}
+.main-contener .menu_container .container_menu {
+  background-color: #F6F6F6;
+}
+.main-contener .menu_container .container_menu .menu_type {
+  text-align: start;
+  border-bottom: 3px solid #99E2D0;
+}
+.main-contener .menu_container .container_menu section {
+  margin: 10px;
+}
+.main-contener .menu_container .container_menu article {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #FFFFFF;
+  align-items: center;
+  margin: 21px 0px;
+  border-radius: 10px;
+}
+.main-contener .menu_container .container_menu article h2 {
+  width: 100%;
+}
+.main-contener .menu_container .container_menu article p {
+  width: 50%;
+}
+.main-contener .menu_container .container_menu article .price {
+  width: 50%;
+}
 .main-contener .restaurant_container {
   background-color: #F6F6F6;
 }

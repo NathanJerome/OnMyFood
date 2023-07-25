@@ -203,7 +203,60 @@ body{
         }
     }
     
+    .restaurant_picture img{
+        width: 100%;
+        object-fit: cover;
+        overflow: hidden;
+        height: 300px;
+    }
 
+    .menu_top_container{
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        background-color: #F6F6F6;
+        gap: 50%;
+        border: 1px solid grey;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        & h1{
+            margin: 20px;
+        }
+        
+    }
+    .menu_container{
+       
+        .container_menu{
+
+            background-color: #F6F6F6;
+            .menu_type{
+                text-align: start;
+                border-bottom: 3px solid #99E2D0;
+            }
+
+            section{
+                margin: 10px;
+            }
+            article{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                background-color: #FFFFFF;
+                align-items: center;
+                margin: 21px 0px;
+                border-radius: 10px;
+                & h2{
+                    width: 100%;
+                }
+                & p{
+                    width: 50%;
+                }
+                & .price{
+                    width: 50%;
+                }
+            }
+        }
+    }
     .restaurant_container{
         background-color: #F6F6F6;
 
