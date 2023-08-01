@@ -5,15 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OnMyFood</title>
     <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.cdnfonts.com/css/shrikhand" rel="stylesheet">
     <script src="https://kit.fontawesome.com/32c7b940c9.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <div class="div_header--logo">
+    <header class="header_resto">
+        <a class="left_arrow" href="../index.html">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        <div class="div_header--logo header_restaurant">
             <img src="../logo/ohmyfood.png" title="Logo de OnMyFood" alt="Logo de OnMyFood">
         </div>
     </header>
-    <main class="main-contener">
+    <main class="main-contener resto">
         <div class="restaurant_picture">
             <img src="../restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Image de restaurant" title="Image de restaurant">
         </div>
@@ -29,11 +33,14 @@
                         <h2 class="title_menu">Fricassée d'escargots</h2>
                         <p class="description">Au piment d'Espelette</p>
                         <span class="price">25€</span>
+                        <div class="menuCheck">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
                     </article>
                     <article class="item-entree">
                         <h2 class="title_menu">Foie gras de cannard mi-cuit</h2>
                         <p class="description">Et ses copeaux de truffe noire</p>
-                        <span class="price">35</span>
+                        <span class="price">35€</span>
                     </article>
                     <article class="item-entree">
                         <h2 class="title_menu">Oeuf au plat</h2>
@@ -52,7 +59,7 @@
                     <article class="item-plats">
                         <h2 class="title_menu">Parmentier de queue de boeuf</h2>
                         <p class="description">A la truffe noire sur sa purée de panais</p>
-                        <span class="price">35</span>
+                        <span class="price">35€</span>
                     </article>
                     <article class="item-plats">
                         <h2 class="title_menu">Filet de turbot</h2>
@@ -80,11 +87,13 @@
                     </article>
                 </section>
 
-                <button class="btn"><a href="#Commander">Commander</button>
+                <button class="btn restaurant-btn"><a href="#Commander">Commander</button>
             </div>
     </main>
     <footer>
+        <div id="logo_footer">
         <img class="logo_footer" src="../logo/ohmyfood@2x.svg">
+        </div>
         <div class="footer-container">
             <div class="row">
                 <i class="fa-solid fa-utensils"></i>
@@ -100,6 +109,5 @@
             <div class="row">
                 <h3>Contact</h3>
             </div>
-         </div>
-    </div>
+        </div>
     </footer>
