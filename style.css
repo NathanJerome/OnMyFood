@@ -74,13 +74,28 @@ body .fas.fa-heart {
   position: relative;
   left: 90%;
   bottom: 35%;
-  transition: all 200ms;
   font-weight: 100;
+  transition: all 1s;
 }
 body .fas.fa-heart:hover {
-  font-weight: 600;
-  background-image: linear-gradient(#E270DA, #A45CDC);
+  /*background-image: linear-gradient(#E270DA, #A45CDC,);
   color: transparent;
+  font-weight: 600;*/
+  animation: fillHeartHover 0.5s ease-in-out forwards;
+}
+@keyframes fillHeartHover {
+  to {
+    font-weight: 600;
+    color: transparent;
+    background-image: linear-gradient(rgb(226, 112, 218), rgb(164, 92, 220));
+  }
+}
+body .fas.fa-heart:active {
+  /* color: transparent;
+   font-weight: 600;
+   background-image: linear-gradient(#E270DA, #A45CDC,);
+   */
+  animation: fillHeartActive 2s ease-in-out forwards;
 }
 body .left_arrow {
   font-weight: 900;
@@ -315,11 +330,38 @@ body .left_arrow .fa-solid.fa-arrow-left {
   display: flex;
   box-shadow: 2px 5px 10px 5px rgba(0, 0, 0, 0.05);
   flex-direction: row;
-  flex-wrap: wrap;
   background-color: #FFFFFF;
   align-items: center;
+  overflow: hidden;
   margin: 21px 10px;
   border-radius: 10px;
+}
+.main-contener .menu_container .container_menu article:hover .menuCheck {
+  width: 10%;
+}
+.main-contener .menu_container .container_menu article:hover .menuCheck .fa-solid.fa-check {
+  transform: rotate(0deg);
+  opacity: 1;
+  animation: opacityShow 1s;
+}
+@keyframes opacityShow {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.main-contener .menu_container .container_menu article .menu-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 @media all and (min-width: 1024px) {
   .main-contener .menu_container .container_menu article {
@@ -331,16 +373,47 @@ body .left_arrow .fa-solid.fa-arrow-left {
   margin-bottom: 0px;
   margin-top: 15px;
   margin-left: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .main-contener .menu_container .container_menu article p {
-  width: 50%;
+  width: 70%;
   margin-top: 10px;
   margin-left: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .main-contener .menu_container .container_menu article .price {
   font-weight: bold;
-  width: 44%;
   text-align: end;
+  margin-top: 10px;
+  margin-left: 5%;
+}
+.main-contener .menu_container .container_menu article .menuCheck {
+  width: 0%;
+  transition: width 1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  visibility: visible;
+  align-items: center;
+  background-color: #99E2D0;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 88px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.main-contener .menu_container .container_menu article .menuCheck i.fa-solid.fa-check {
+  background-color: white;
+  border-radius: 100%;
+  padding: 3px;
+  opacity: 0;
+  transition: transform 1s, opacity 1s ease-in-out;
+  transform: rotate(-181deg);
+  color: #99E2D0;
 }
 .main-contener .restaurant_container {
   background-color: #F6F6F6;
@@ -474,6 +547,9 @@ footer #logo_footer {
 footer .footer-container {
   display: flex;
   margin-left: 15px;
+}
+footer .footer-container a {
+  color: white;
 }
 @media screen and (min-width: 1024px) {
   footer .footer-container {

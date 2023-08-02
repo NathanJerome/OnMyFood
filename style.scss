@@ -168,14 +168,31 @@ body{
     position: relative;
     left: 90%;
     bottom: 35%;
-    transition: all 200ms;
     font-weight: 100;
+    transition: all 1s;
     
     &:hover {
+        /*background-image: linear-gradient(#E270DA, #A45CDC,);
+        color: transparent;
+        font-weight: 600;*/
+        animation: fillHeartHover 0.5s ease-in-out forwards;
+        @keyframes fillHeartHover {
+            to {
+              font-weight: 600;
+              color: transparent;
+              background-image: linear-gradient(rgba(226, 112, 218, 1), rgba(164, 92, 220, 1));
+            }
+          }
+    }
+    &:active{
+       /* color: transparent;
         font-weight: 600;
         background-image: linear-gradient(#E270DA, #A45CDC,);
-        color: transparent;
+        */
+        animation: fillHeartActive 2s ease-in-out forwards;
+        
     }
+    
 }
 .left_arrow{
     font-weight: 900;
@@ -371,10 +388,42 @@ body{
                 display: flex;
                 box-shadow: 2px 5px 10px 5px rgba(0,0,0,.05);
                 flex-direction: row;
-                flex-wrap: wrap;
                 background-color: #FFFFFF;
                 align-items: center;
+                overflow: hidden;
                 margin: 21px 10px;
+
+                &:hover{
+                    .menuCheck{
+                        width: 10%;
+                        .fa-solid.fa-check{
+                            transform: rotate(0deg);
+                            opacity: 1;    
+                            animation: opacityShow 1s;
+                            @keyframes opacityShow {
+                                0%{
+                                    opacity: 0;
+                                }
+                                30%{
+                                    opacity: 0.1;
+                                }
+                                100%{
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }   
+                    
+                   
+                }
+                .menu-content {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    flex: 1;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
                 @media all and (min-width: 1024px){
                     margin: 25px 20%;
                 }
@@ -384,18 +433,52 @@ body{
                     margin-bottom: 0px;
                     margin-top: 15px;
                     margin-left: 10px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
 
                 }
                 & p{
-                    width: 50%;
+                    width: 70%;
                     margin-top: 10px;
                     margin-left: 10px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
 
                 }
                 & .price{
                     font-weight: bold;
-                    width: 44%;
                     text-align: end;
+                    margin-top: 10px;
+                    margin-left: 5%;
+                    
+                }
+                .menuCheck{
+                    width: 0%;
+                    transition: width 1s ease-in-out;
+                    display: flex;
+                    justify-content: center;
+                    visibility: visible;
+                    align-items: center;
+                    background-color: #99E2D0;
+                    border-bottom-right-radius: 10px;
+                    border-top-right-radius: 10px;
+                    height: 88px;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+    
+                    i.fa-solid.fa-check {
+                        background-color: white;
+                        border-radius: 100%;
+                        padding: 3px;
+                        opacity: 0;
+                        transition: transform 1s, opacity 1s ease-in-out;
+                        transform: rotate(-181deg);
+                        color: #99E2D0;
+                       
+                    }
                     
                 }
             }
@@ -421,8 +504,7 @@ body{
             display: flex;
             justify-content: center;
             @media screen and (min-width: 1024px){
-                width: 50%;
-                
+                width: 50%;              
             }
             @media screen and (max-width: 1023px){
                 display: flex;
@@ -516,6 +598,10 @@ footer{
         }
     }
     .footer-container{
+        a{
+            color: white;
+        }
+
         @media screen and (min-width: 1024px) {
             flex-direction: row;
             margin-left: 15px;
