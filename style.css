@@ -50,8 +50,9 @@ body .loader {
 }
 body .loader .circle {
   padding: 12%;
-  border-radius: 100%;
-  margin: 0px 30px;
+  border-radius: 101%;
+  margin: 0% 3%;
+  width: 0%;
   animation: loading 2s ease-in;
 }
 body .loader .circle:nth-child(1) {
@@ -131,9 +132,6 @@ body .left_arrow .fa-solid.fa-arrow-left {
   to {
     visibility: hidden;
   }
-}
-.main-contener.resto {
-  background-color: #F6F6F6;
 }
 @media screen and (min-width: 1024px) {
   .main-contener .functioning {
@@ -418,6 +416,9 @@ body .left_arrow .fa-solid.fa-arrow-left {
 .main-contener .restaurant_container {
   background-color: #F6F6F6;
 }
+.main-contener .restaurant_container a {
+  color: #000000;
+}
 .main-contener .restaurant_container h1 {
   position: relative;
   text-align: left;
@@ -465,6 +466,7 @@ body .left_arrow .fa-solid.fa-arrow-left {
   width: 80%;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
+  position: relative;
 }
 .main-contener .restaurant_container .card-container .card img {
   -o-object-fit: cover;
@@ -489,18 +491,20 @@ body .left_arrow .fa-solid.fa-arrow-left {
   width: 20%;
   border-radius: 5px;
   padding: 5px;
-  position: relative;
-  left: 74%;
+  position: absolute;
   font-weight: 900;
 }
 @media screen and (max-width: 1023px) {
   .main-contener .restaurant_container .card-container .card .new-content {
-    bottom: 68%;
+    left: 75%;
+    top: 3%;
   }
 }
 @media screen and (min-width: 1024px) {
   .main-contener .restaurant_container .card-container .card .new-content {
-    bottom: 54%;
+    width: 100px;
+    top: 4%;
+    right: 4%;
   }
 }
 .main-contener .restaurant_container .card-container .card .card-bottom {
@@ -509,8 +513,13 @@ body .left_arrow .fa-solid.fa-arrow-left {
   flex-direction: column;
   margin-left: 10px;
   align-items: flex-start;
+  position: relative;
 }
 .main-contener .restaurant_container .card-container .card .card-bottom h2 {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+.main-contener .restaurant_container .card-container .card .card-bottom p {
   margin: 0;
 }
 

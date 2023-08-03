@@ -139,8 +139,9 @@ body{
     animation: hideLoader 2s linear forwards;
     & .circle{
         padding: 12%;
-        border-radius: 100%;
-        margin: 0px 30px;
+        border-radius: 101%;
+        margin: 0% 3%;
+        width: 0%;
         animation: loading 2s ease-in;
         &:nth-child(1){
             background-color: #9356DC;
@@ -236,10 +237,6 @@ body{
 }
 
 .main-contener{
-    &.resto{
-        background-color: #F6F6F6;
-    }
-
     .functioning{
         @media screen and (min-width: 1024px){
             margin: 0 7%;
@@ -487,6 +484,9 @@ body{
     .restaurant_container{
         background-color: #F6F6F6;
 
+        a{
+            color: #000000
+        }
         h1{
             @include h1(23px,10%);
             @media screen and (min-width: 1024px){
@@ -522,6 +522,7 @@ body{
                 width: 80%;
                 border-bottom-left-radius: 25px;
                 border-bottom-right-radius: 25px;
+                position: relative;
                 img{
                     @media screen and (min-width: 1024px){
                         height: 200px;
@@ -543,16 +544,18 @@ body{
                     width: 20%;
                     border-radius: 5px;
                     padding: 5px;
-                    position: relative;
-                    left: 74%;
+                    position: absolute;
+                    font-weight: 900;
                     @media screen and (max-width: 1023px){
-                       bottom: 68%;
+                        left: 75%;
+                        top: 3%;
                     }
                     @media screen and (min-width: 1024px){
-                         bottom: 54%;
+                        width: 100px;
+                        top: 4%;
+                        right: 4%;
+                       
                     }
-                    
-                    font-weight: 900;
                 }
 
                 .card-bottom{
@@ -561,7 +564,12 @@ body{
                     flex-direction: column;
                     margin-left: 10px;
                     align-items: flex-start;
+                    position: relative;
                     h2{
+                        margin-top: 15px;
+                        margin-bottom: 5px;
+                    }
+                    p{
                         margin: 0;
                     }
 
