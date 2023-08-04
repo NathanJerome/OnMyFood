@@ -24,3 +24,19 @@ Il est primordial d'utiliser Sass sous le format desiré et
 - Être compatible et passer la validation W3C
 
 ### Animation
+
+- **Boutons**
+    - Au survol, la couleur de fond des boutons principaux devra légèrement s’éclaircir
+    - L’ombre portée devra également être plus visible
+    - Mettre en place un bouton "J'aime" qui se remplira progressivement sur 1 clic ou hover
+
+- **Page d’accueil**
+    - Un "loader" devra être mis en respectant certaines chartes:
+        - Apparaitre en 1 et 3 secondes lors de l'arrivée
+        - Respecter la charte graphique du site
+- **Pages de menu**
+    - Faire apparaitre progressivement les plats avec un delai soit un par un, soit par groupe
+    - Faire apparaitre une coche a droite des plats qui coulisse vers la gauche, faisant potentiellement reduire l'intitullé des plats s'ils sont trop long
+    
+
+
