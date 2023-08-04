@@ -14,7 +14,7 @@ header.header_resto a {
   margin-left: 10px;
 }
 header img {
-  scale: 0.8;
+  transform: scale(0.8);
 }
 header .div_header--logo {
   z-index: 1;
@@ -157,12 +157,13 @@ body .left_arrow .fa-solid.fa-arrow-left {
   background: linear-gradient(#E270DA, #A45CDC);
   box-shadow: 1px 3px 10px grey;
   padding: 15px;
+  color: white;
 }
 .main-contener .btn a {
   color: white;
 }
 .main-contener .btn:hover {
-  scale: 105%;
+  transform: scale(1.05);
   filter: brightness(1.1);
 }
 .main-contener .btn.restaurant-btn {
