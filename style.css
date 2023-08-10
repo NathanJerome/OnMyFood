@@ -31,6 +31,9 @@ body {
   justify-content: center;
   margin: 0;
 }
+body p {
+  font-family: Roboto;
+}
 body a:visited {
   color: #000000; /* Couleur de lien souhaitée pour les liens visités (identique à celle des liens non visités) */
 }
@@ -76,27 +79,21 @@ body .fas.fa-heart {
   left: 90%;
   bottom: 35%;
   font-weight: 100;
-  transition: all 1s;
+  transition: background-image 1.5s, color 0.4s, font-weight 0.1s;
 }
 body .fas.fa-heart:hover {
-  /*background-image: linear-gradient(#E270DA, #A45CDC,);
+  font-weight: 600;
   color: transparent;
-  font-weight: 600;*/
+  background-image: linear-gradient(rgb(226, 112, 218), rgb(164, 92, 220));
+  /* Tentative d'animation
   animation: fillHeartHover 0.5s ease-in-out forwards;
-}
-@keyframes fillHeartHover {
-  to {
-    font-weight: 600;
-    color: transparent;
-    background-image: linear-gradient(rgb(226, 112, 218), rgb(164, 92, 220));
-  }
-}
-body .fas.fa-heart:active {
-  /* color: transparent;
-   font-weight: 600;
-   background-image: linear-gradient(#E270DA, #A45CDC,);
-   */
-  animation: fillHeartActive 2s ease-in-out forwards;
+  @keyframes fillHeartHover {
+      to {
+        font-weight: 600;
+        color: transparent;
+        background-image: linear-gradient(rgba(226, 112, 218, 1), rgba(164, 92, 220, 1));
+      }
+    }*/
 }
 body .left_arrow {
   font-weight: 900;
@@ -158,6 +155,7 @@ body .left_arrow .fa-solid.fa-arrow-left {
   box-shadow: 1px 3px 10px grey;
   padding: 15px;
   color: white;
+  transition: all 0.4s ease-in-out;
 }
 .main-contener .btn a {
   color: white;
@@ -165,13 +163,14 @@ body .left_arrow .fa-solid.fa-arrow-left {
 .main-contener .btn:hover {
   transform: scale(1.05);
   filter: brightness(1.1);
+  box-shadow: 4px 6px 13px dimgrey;
 }
 .main-contener .btn.restaurant-btn {
   padding: 22px;
   margin: 15px 35px;
   text-align: center;
   position: relative;
-  left: 30%;
+  left: 34%;
   margin-bottom: 5%;
 }
 .main-contener section {
@@ -233,19 +232,20 @@ body .left_arrow .fa-solid.fa-arrow-left {
   position: relative;
   padding: 13px;
   height: 5px;
-  right: 4%;
+  right: 9%;
   justify-content: center;
   align-items: center;
 }
 .main-contener .functioning-container .functioning-block .functioning-items h2 {
-  width: 50%;
+  width: 73%;
   position: relative;
-  right: 19%;
 }
 .main-contener .functioning-container .functioning-block .functioning-items i {
-  width: 1%;
-  width: 40%;
-  margin-right: 1%;
+  width: 7%;
+  margin-right: 2%;
+}
+.main-contener .functioning-container .functioning-block .functioning-items .fa-store {
+  color: #9356DC;
 }
 .main-contener .restaurant_picture img {
   width: 100%;
@@ -325,6 +325,12 @@ body .left_arrow .fa-solid.fa-arrow-left {
     opacity: 1;
   }
 }
+.main-contener .menu_container .container_menu section.plats {
+  animation-delay: 0.4s;
+}
+.main-contener .menu_container .container_menu section.desserts {
+  animation-delay: 0.6s;
+}
 .main-contener .menu_container .container_menu article {
   display: flex;
   box-shadow: 2px 5px 10px 5px rgba(0, 0, 0, 0.05);
@@ -388,7 +394,12 @@ body .left_arrow .fa-solid.fa-arrow-left {
   font-weight: bold;
   text-align: end;
   margin-top: 10px;
-  margin-left: 5%;
+  margin-left: 24%;
+}
+@media all and (min-width: 1024px) {
+  .main-contener .menu_container .container_menu article .price {
+    margin-left: 21%;
+  }
 }
 .main-contener .menu_container .container_menu article .menuCheck {
   width: 0%;

@@ -40,7 +40,7 @@
         position: relative;
         padding: 13px;
         height: 5px;
-        right: 4%;
+        right: 9%;
         justify-content: center;
         align-items: center;
     }
@@ -70,13 +70,14 @@
     &:hover{
         transform:scale(1.05);
         filter:brightness(1.1);
+        box-shadow: 4px 6px 13px dimgrey;
     }
     &.restaurant-btn{
         padding: 22px;
         margin: 15px 35px;
         text-align: center;
         position: relative;
-        left: 30%;
+        left: 34%;
         margin-bottom: 5%;
     }
 }
@@ -118,6 +119,9 @@ header{
 
 body{
 
+    p{
+        font-family: Roboto;
+    }
     
    @include text-center();
    margin: 0;
@@ -170,12 +174,13 @@ body{
     left: 90%;
     bottom: 35%;
     font-weight: 100;
-    transition: all 1s;
+    transition: background-image 1.5s, color 0.4s, font-weight 0.1s ;
     
     &:hover {
-        /*background-image: linear-gradient(#E270DA, #A45CDC,);
+        font-weight: 600;
         color: transparent;
-        font-weight: 600;*/
+        background-image: linear-gradient(rgba(226, 112, 218, 1), rgba(164, 92, 220, 1));
+        /* Tentative d'animation
         animation: fillHeartHover 0.5s ease-in-out forwards;
         @keyframes fillHeartHover {
             to {
@@ -183,15 +188,7 @@ body{
               color: transparent;
               background-image: linear-gradient(rgba(226, 112, 218, 1), rgba(164, 92, 220, 1));
             }
-          }
-    }
-    &:active{
-       /* color: transparent;
-        font-weight: 600;
-        background-image: linear-gradient(#E270DA, #A45CDC,);
-        */
-        animation: fillHeartActive 2s ease-in-out forwards;
-        
+          }*/
     }
     
 }
@@ -258,6 +255,7 @@ body{
     .btn{
         @include btn();
         color: white;
+        transition:  all 0.4s ease-in-out;
     }
 
     section{
@@ -292,15 +290,16 @@ body{
             .functioning-items{
                 @include rounded_div();
                 h2{
-                    width: 50%;
+                    width: 73%;
                     position: relative;
-                    right: 19%;
 
                 }
                 i{
-                    width: 1%;
-                    width: 40%;
-                    margin-right: 1%;
+                    width: 7%;
+                    margin-right: 2%;
+                }
+                .fa-store{
+                    color: #9356DC;
                 }
 
             }
@@ -381,6 +380,13 @@ body{
                         opacity: 1;
                     }
                 }
+                &.plats{
+                    animation-delay: 0.4s;
+                }
+
+                &.desserts{
+                    animation-delay: 0.6s;
+                }
             }
             article{
                 display: flex;
@@ -390,6 +396,7 @@ body{
                 align-items: center;
                 overflow: hidden;
                 margin: 21px 10px;
+                
 
                 &:hover{
                     .menuCheck{
@@ -449,7 +456,11 @@ body{
                     font-weight: bold;
                     text-align: end;
                     margin-top: 10px;
-                    margin-left: 5%;
+                    margin-left: 24%;
+                    @media all and (min-width: 1024px) {
+                         margin-left: 21%;
+                    }
+                    
                     
                 }
                 .menuCheck{
