@@ -90,6 +90,8 @@
 
 *{
     text-decoration: none;
+    font-family: Roboto;
+
 }
 
 header{
@@ -118,10 +120,6 @@ header{
 }
 
 body{
-
-    p{
-        font-family: Roboto;
-    }
     
    @include text-center();
    margin: 0;
